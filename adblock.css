@@ -6,6 +6,31 @@
 @author         Me
 ==/UserStyle== */
 
+/* Stream Quality Upsell */
+div[class*=upsellBanner] {
+    display: none !important;
+}
+
+/* Hides Premium Buttons In Quality Settings */
+div[class*="qualitySettingsContainer"] button[class*=selectorButtonPremiumRequired] {
+    display: none !important;
+}
+
+/* Hides Quality Selector If Nitro Button Upsell Present Due To There Only Being A Single Resolution Left! */
+div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:first-child:has(button[class*=selectorButtonPremiumRequired]) {
+    display: none !important;
+}
+
+/* Makes The Fps Selector Smaller */
+div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:has(button[class*=selectorButtonPremiumRequired]) div[class*="group"] {
+    width: 106.84px;
+}
+
+/* Restores Border Radius To New Last Button */
+div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:has(button[class*=selectorButtonPremiumRequired]) div[class*="group"] button:nth-last-child(2) {
+    border-radius: 0 3px 3px 0;
+}
+
 /* Chat view blocks */
 /* Nitro tab */
 [data-list-item-id*="___nitro"] {
