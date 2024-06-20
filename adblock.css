@@ -2,8 +2,8 @@
 @name           discord.com - déc. 2023
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
-@description    A new userstyle
-@author         Me
+@description    Removes annoying Nitro upsells from Discord.
+@author         CroissantDuNord & contributors
 ==/UserStyle== */
 
 /* Stream Quality Upsell */
@@ -48,65 +48,60 @@ div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:ha
 }
 
 /* Gift button */
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.chat__52833 > div.content__1a4fe > div > div.chatContainer__23434 > main > form > div > div.scrollableContainer__33e06.themedBackground__6b1b6 > div > div.buttons_ce5b56 > button.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4 {
-    display: none
+div[class*=channelTextArea_]>div>div>div[class*=buttons_]>button[aria-haspopup=dialog] {
+  display: none;
 }
 
-/* Super reactions */
+/* Super reactions -- Doesn't seem like these are being pushed on free users anymore. */
+/* Leaving them as is, but raise an issue if they break normal reactions. */
 #message-add-reaction-1 {
-    display: none
+    display: none;
 }
 #message-actions-add-reaction-1 {
-    display: none
+    display: none;
 }
-/* (These rules are commented because they don't seem to be necessary anymore, and are therefore redundant. However they're kept here in case the super reaction button when hovering over posts comes back.)
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div.app_de4237 > div.layers__1c917.layers_a23c37 > div > div > div > div > div.chat__52833 > div.content__1a4fe > div > div.chatContainer__23434 > main > div.messagesWrapper_ea2b0b.group-spacing-0 > div > div.scrollerContent_c73942.content__23cab > ol > li > div > div.buttonContainer_dd4b62 > div.buttons__3766a.container__9d616 > div.buttonsInner_bca8fa.wrapper_c727b6 > div.button_d553e5:nth-of-type(2) {
-    display: none
-}
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div.app_de4237 > div.layers__1c917.layers_a23c37 > div > div > div > div > div.chat__52833 > div.content__1a4fe > div > div.chatContainer__23434 > main > div.messagesWrapper_ea2b0b.group-spacing-0 > div.scroller__1f96e.customTheme_db4d28.auto_a48086.scrollerBase_dc3aa9.disableScrollAnchor_e73c0f.managedReactiveScroller__79923 > div.scrollerContent_c73942.content__23cab > ol.scrollerInner__059a5 > li > div > div.container_dbadf5 > div.reactions_b8dc93 > div:nth-last-child(1) {
-    display: none
-}
-*/
 
 /* Settings blocking */
 /* Banner ad */
 #profile-customization-tab > div:has(div[class*="artContainer"][role="presentation"]) {
-    display: none
+    display: none;
 }
 
 /* Avatar decoration settings */
-#profile-customization-tab > div > div.profileCustomizationSection__88eff > div.baseLayout_b00434 > div.sectionsContainer_a37883 > div.customizationSection__16fec:nth-of-type(4) {
-    display: none
+#profile-customization-tab > div > div[class*=profileCustomizationSection_] > div[class*=baseLayout_] > div[class*=sectionsContainer_] > div[class*=customizationSection_]:nth-of-type(4) {
+    display: none;
 }
 
 /* Profile effect settings */
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div.customizationSection__16fec.showBorder__9e03d {
-    display: none
+#profile-customization-tab > div > div[class*=profileCustomizationSection_] > div[class*=baseLayout_] > div[class*=sectionsContainer_] > div[class*=customizationSection_]:nth-of-type(5) {
+    display: none;
 }
 
 /* "Try Nitro!" ad */
-#profile-customization-tab > div.premiumFeatureBorder__9bbb3.featureBorder_a44f20.tryItOutSection__0f9fb {
-    display: none
+#profile-customization-tab > [class*=premiumFeatureBorder_] {
+    display: none;
 }
 
-/* App theme */
-#appearance-tab > div > div.children_b15c64 > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div {
-    display: none
+/* Server profiles upsell */
+#profile-customization-tab > div > div[class*=profileCustomizationSection_] > div[class*=baseLayout_] > div[class*=sectionsContainer_] > div[class*=upsellOverlayContainer_] {
+    display: none;
+}
+
+/* App colour */
+#appearance-tab > div > div > div > div > div[role=radiogroup] > section:not(section[class*=basicThemeSelectors_]) {
+    display: none;
 }
 
 /* Icon Theme (just edit the .ico file) */
-#appearance-tab > div > div.children_b15c64 > div:nth-child(2) > div.selectionGroup__36139 {
-    display: none
+#appearance-tab > div > div > div > div[class*=selectionGroup_]:has([class*=appIconSelectionContainer_]) {
+    display: none;
 }
 
+/* Billing info sidebar --- I've decided it's better to just leave this, it's not too intrusive.
+Blocking each element in the list is tedious and can break some client mods that add their own settings entries.
+If anyone knows a better way to block precisely the billing info settings, please make a PR :) */
 
-
-/* Per-server settings nitro ad */
-#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div.upsellOverlayContainer__08979 {
-    display: none
-}
-
-/* Billing info sidebar */
+/*
 #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div > div:nth-child(2) > div > div.sidebarRegion__60457 > div > nav > div > div.premiumTab__57bdc.item__48dda.themed_b957e8 {
     display: none
 }
@@ -127,48 +122,65 @@ div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:ha
 }
 #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div > div > div.standardSidebarView__1129a > div.sidebarRegion__60457 > div.sidebarRegionScroller__1fa7e.thin_b1c063.scrollerBase_dc3aa9.fade_ba0fa0 > nav.sidebar__9e3e2 > div.side_b4b3f6 > div.themed_b957e8.item__48dda:nth-of-type(17) {
     display: none
-}
+} */
 
 /* Guilds blocking */
 /* Server boost button */
 #guild-header-popout > div > div:nth-child(1), #guild-header-popout > div > div:nth-child(2) {
-    display: none
+    display: none;
+}
+
+/* Server boost progress bar */
+ul > li:has(div[data-list-item-id*=channels___boosts-]) {
+    display: none;
+}
+
+/* Server booster icon */
+svg[class*=premiumIcon_] {
+    display: none;
 }
 
 /* Shop AD Profile */
 html.full-motion.show-redesigned-icons.theme-dark.platform-web.font-size-16 body div#app-mount.appMount_fae9dd div.appAsidePanelWrapper__714a6 div.notAppAsidePanel__9d124 div.app_b1f720 div.app_de4237 div.layers__1c917.layers_a23c37 div.layer__2efaa div.standardSidebarView__1129a div.contentRegion__0bec1 div.contentTransitionWrap_c5bc61 div.contentRegionScroller__86c79.contentRegionShownSidebar__610ed.auto_a48086.scrollerBase_dc3aa9 div:nth-child(3) {
-    display: none
+    display: none;
 }
 
 /* Custom Join Sound AD (No discord I dont want to play a random meme sound when I join a call)*/
 #popout_4611 > div > div > div.gridNoticeWrapper__548b9 > div {
-    display: none
+    display: none;
 }
 
 /* Nitro Icon Sever */
 #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__7c79d.clickable__2d589.hasBanner_e78601.bannerVisible__191f6 > header > div > div.guildIconV2Container__53cdb {
-    display: none
+    display: none;
 }
 
 /* Profile Effect (Shop) */
 #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) {
-    display: none
+    display: none;
 }
 
-
-/* Hide ads for to long message */
-
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div.layer_ad604d > div > div > div.content__764ce.content__24381.thin_b1c063.scrollerBase_dc3aa9 > div.contentContainer__3b9e6 > div.gradientUpsellWrapper__221ac.gradientUpsellWrapperTier2_d1df4c, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div.layer_ad604d > div > div > div.flex_f5fbb7.horizontalReverse_dc209c.justifyStart__42744.alignStretch_e239ef.noWrap__5c413.footer__89240.footer_c793da.footerSeparator__57d95 > div > button.shinyButton_fc8363.button_afdfd9.lookFilled__19298.colorGreen__5f181.sizeSmall__71a98.grow__4c8a4, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div.layer_ad604d > div > div > div.artContainer__56b19.artContainerBoxShadow__63ecb, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.chat__52833 > div.content__1a4fe > div > div.chatContainer__23434 > main > form > div > div.characterCount_e55010 > div.root__03160.upsell__54a69, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.chat__52833 > div.content__1a4fe > div > div.chatContainer__23434 > main > form > div > div.characterCount_e55010.error_c9623f > div.messageLengthUpsellContainer__32d48.messageLengthUpsellAppearAnimation__1ce4e > div.messageLengthBrandedContainer__84a34.gradientUpsellWrapper__221ac.gradientUpsellWrapperTier2_d1df4c,#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.chat__52833 > div.content__1a4fe > div > div.chatContainer__23434 > main > form > div > div.characterCount_e55010.error_c9623f > div.messageLengthUpsellContainer__32d48.messageLengthUpsellAppearAnimation__1ce4e > button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.chat__52833 > div.content__1a4fe > div > div.chatContainer__23434 > main > form > div > div.characterCount_e55010.error_c9623f > div.messageLengthUpsellContainer__32d48.messageLengthUpsellAppearAnimation__1ce4e > div.divider_b97e44 {
-    display: none
+/* Hide upsell banner for messages that are too long */
+div[class*=characterCount] > div[class*=upsell_] {
+    display: none;
 }
 
-
-/* Message limit warning smaller */
-.text-lg-bold_c9b12c, .heading-lg-extrabold_c29e62 {
-    font-size: 15px;
+/* Hide message length Nitro upsell art */
+div[role=dialog] > div > div[class*=artContainer_] {
+  display: none;
+}
+div[role=dialog] > div > div > h2[data-text-variant="heading-xl/bold"] {
+  margin-top: 15%;
 }
 
-/* Re-center the text */
-.contentContainer__3b9e6 {
+/* Hide message length Nitro upsell message */
+div[role=dialog] > div > div > div[data-text-variant="text-md/normal"] {
+  display: none;
+}
+
+/* Hide message length Nitro "subscribe" button */
+div[role=dialog] > div > div > div[class*=primaryActions_] > button:has(svg[class*=premiumIcon]) {
+  display: none;
+}
     padding-top: 40px
 }
