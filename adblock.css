@@ -182,5 +182,3 @@ div[role=dialog] > div > div > div[data-text-variant="text-md/normal"] {
 div[role=dialog] > div > div > div[class*=primaryActions_] > button:has(svg[class*=premiumIcon]) {
   display: none;
 }
-    padding-top: 40px
-}
