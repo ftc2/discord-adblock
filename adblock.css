@@ -178,19 +178,6 @@ div[class*=characterCount] > div[class*=upsell_] {
     display: none;
 }
 
-/* Hide message length Nitro upsell art */
-div[role=dialog] > div > div[class*=artContainer_] {
-  display: none;
-}
-div[role=dialog] > div > div > h2[data-text-variant="heading-xl/bold"] {
-  margin-top: 15%;
-}
-
-/* Hide message length Nitro upsell message */
-div[role=dialog] > div > div > div[data-text-variant="text-md/normal"] {
-  display: none;
-}
-
 /* Hide message length Nitro "subscribe" button */
 div[role=dialog] > div > div > div[class*=primaryActions_] > button:has(svg[class*=premiumIcon]) {
   display: none;
