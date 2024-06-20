@@ -61,6 +61,19 @@ div[class*=channelTextArea_]>div>div>div[class*=buttons_]>button[aria-haspopup=d
     display: none;
 }
 
+/* Remove avatar decorations */
+svg[class*=avatarDecoration] {
+  display: none;
+}
+
+/* Remove profile decorations */
+div[class*=profileEffects] {
+  display: none;
+}
+div[class*=userProfileModalInner]>header>svg>foreignObject>div[class*=bannerPremium] {
+  display: none;
+}
+
 /* Settings blocking */
 /* Banner ad */
 #profile-customization-tab > div:has(div[class*="artContainer"][role="presentation"]) {
