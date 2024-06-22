@@ -42,7 +42,7 @@ div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:ha
     display: none;
 }
 
-/* Store popup ads - Thank you zzaria */
+/* Store popup ads */
 [id^=popout]:has([class^=buttonContainerVertical]) {
     display:none;
 }
@@ -181,4 +181,9 @@ div[class*=characterCount] > div[class*=upsell_] {
 /* Hide message length Nitro "subscribe" button */
 div[role=dialog] > div > div > div[class*=primaryActions_] > button:has(svg[class*=premiumIcon]) {
   display: none;
+}
+
+/* desktop app ad */
+[class^=notice_]:has(i[class^=iconApple]){
+    display:none;
 }
