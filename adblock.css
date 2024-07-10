@@ -62,7 +62,10 @@ div[class*=channelTextArea_]>div>div>div[class*=buttons_]>button[aria-haspopup=d
 }
 
 /* Remove avatar decorations */
-svg[class*=avatarDecoration] {
+svg[class*=avatarDecoration_] {
+  display: none;
+}
+img[class*=avatarDecoration_] {
   display: none;
 }
 
