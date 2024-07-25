@@ -6,6 +6,11 @@
 @author         CroissantDuNord & contributors
 ==/UserStyle== */
 
+/* Fullscreen Nitro trial ad */
+div[class^=layerContainer_]:has(div[class*="freeTrialPillWithSparkles_"]) {
+  display: none;
+}
+
 /* Stream Quality Upsell */
 div[class*=upsellBanner] {
     display: none !important;
