@@ -118,6 +118,11 @@ div[class*=userProfileModalInner]>header>svg>foreignObject>div[class*=bannerPrem
     display: none;
 }
 
+/* BOGO button in settings */
+div[class^=premiumLabel_] > div[class^=badgeContainer_]:has(span[class*="star_"]) {
+  display: none;
+}
+
 /* Billing info sidebar --- I've decided it's better to just leave this, it's not too intrusive.
 Blocking each element in the list is tedious and can break some client mods that add their own settings entries.
 If anyone knows a better way to block precisely the billing info settings, please make a PR :) */
