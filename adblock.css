@@ -37,6 +37,11 @@ div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:ha
 }
 
 /* Chat view blocks */
+/* App launcher */
+div[class^=channelAppLauncher_] {
+  display: none;
+}
+
 /* Nitro tab */
 [data-list-item-id*="___nitro"] {
     display: none;
