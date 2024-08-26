@@ -36,3 +36,8 @@ ul > li:has(div[data-list-item-id*=channels___boosts-]) {
 div[class^=guildIconContainer_]:has(svg[class^=boostedGuildIconGem_]) {
     display: none;
 }
+
+/* Quests icon */
+svg[class^=questsIcon_] {
+  display: none;
+}
