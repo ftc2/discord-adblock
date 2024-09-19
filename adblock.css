@@ -42,13 +42,13 @@ div[class^=channelAppLauncher_] {
   display: none;
 }
 
-/* Nitro tab */
-[data-list-item-id*="___nitro"] {
+/* Store tab */
+li[class^=channel_]:has(a[href="/shop"]) {
     display: none;
 }
 
-/* Store tab */
-[data-list-item-id*="___shop"] {
+/* Nitro tab */
+li[class^=channel_]:has(a[href="/store"]) {
     display: none;
 }
 
