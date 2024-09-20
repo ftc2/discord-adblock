@@ -41,3 +41,11 @@ div[class^=guildIconContainer_]:has(svg[class^=boostedGuildIconGem_]) {
 svg[class^=questsIcon_] {
   display: none;
 }
+
+/* Activity list */
+h3[class^=membersGroup_]:has(span[role="button"]) {
+  display: none;
+}
+div[class^=container_] > aside[class^=membersWrap_] > div[class^=members_] > div[role^=list] > div:has(div[class*="openOnHover_"]) {
+  display: none;
+}
