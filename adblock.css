@@ -41,8 +41,8 @@ div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:ha
 div[class^=channelAppLauncher_] {
   display: none;
 }
-[class^="jumpToPresentBar_"]{
-    right: 16px
+div[class^="jumpToPresentBar_"] {
+  right: 16px;
 }
 div[id="guild-header-popout-application-directory"] {
   display: none;
