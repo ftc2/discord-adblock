@@ -59,12 +59,13 @@ div[class^=container_] > aside[class^=membersWrap_] > div[class^=members_] > div
 }
 
 /* "Forward" hover bar button */
-div[class^=hoverBarButton][aria-label=Forward] {
+div[class^=hoverBarButton_][aria-label=Forward] {
   display: none;
 }
 
-/* "Events" button */
-nav > div > ul > li:has(div[data-list-item-id^=channels___upcoming-events-]) {
+/* "Events" button at the top of channel list */
+li:has([id^=upcoming-events-]),
+li:has([id^=upcoming-events-]) + [class^=sectionDivider_] {
   display: none;
 }
 
