@@ -64,8 +64,8 @@ div[class^=hoverBarButton_][aria-label=Forward] {
 }
 
 /* "Events" button at the top of channel list */
-li:has([id^=upcoming-events-]),
-li:has([id^=upcoming-events-]) + [class^=sectionDivider_] {
+#channels > ul > li:has([id^=upcoming-events-]),
+#channels > ul > li:has([id^=upcoming-events-]) + [class^=sectionDivider_] {
   display: none;
 }
 
