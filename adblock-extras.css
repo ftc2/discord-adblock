@@ -6,6 +6,8 @@
 @author         Ridge & contributors
 ==/UserStyle== */
 
+/* It is highly recommended you manually import the rules you want from this file, rather than using the entire
+
 /* Remove avatar decorations */
 svg[class*=avatarDecoration_] {
   display: none;
@@ -47,5 +49,10 @@ h3[class^=membersGroup_]:has(span[role="button"]) {
   display: none;
 }
 div[class^=container_] > aside[class^=membersWrap_] > div[class^=members_] > div[role^=list] > div:has(div[class*="openOnHover_"]) {
+  display: none;
+}
+
+/* Remove "Forward" hover bar button */
+div[class^=hoverBarButton][aria-label=Forward] {
   display: none;
 }
