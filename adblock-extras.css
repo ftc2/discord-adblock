@@ -6,7 +6,8 @@
 @author         Ridge & contributors
 ==/UserStyle== */
 
-/* It is highly recommended you manually import the rules you want from this file, rather than using the entire
+/* It is highly recommended you manually import the rules you want from this file, rather than using the entire list. */
+/* This is a highly opinionated collection of rules that remove clutter from the client, that some might find useful or desirable. */
 
 /* Remove avatar decorations */
 svg[class*=avatarDecoration_] {
