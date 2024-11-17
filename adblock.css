@@ -67,7 +67,7 @@ li[class^=channel_]:has(a[href="/store"]) {
 }
 
 /* Gift button */
-div[class^=buttons_] > div[class^=container_]:has(div[class^=giftIconButton_]) {
+div[class^=buttons_] > button[aria-haspopup="dialog"]:has(path[d="M0,0 L600,0 L600,600 L0,600z"]) {
   display: none;
 }
 
