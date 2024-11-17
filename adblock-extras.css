@@ -56,3 +56,8 @@ div[class^=container_] > aside[class^=membersWrap_] > div[class^=members_] > div
 div[class^=hoverBarButton][aria-label=Forward] {
   display: none;
 }
+
+/* Remove "Events" button */
+nav > div > ul > li:has(div[data-list-item-id^=channels___upcoming-events-]) {
+  display: none;
+}
