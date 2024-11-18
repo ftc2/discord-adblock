@@ -179,7 +179,12 @@ div[role=dialog] > div > div > div[class*=primaryActions_] > button:has(svg[clas
   display: none;
 }
 
-/* desktop app ad */
+/* Desktop app ad */
 [class^=notice_]:has(i[class^=iconApple]){
     display:none;
+}
+
+/* You have X days left to try Nitro banner */
+div[class^=base_] > div[class^=notice_]:has([class^=premiumIcon_]) {
+    display: none;
 }
