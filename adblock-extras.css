@@ -46,7 +46,7 @@ svg[class^=questsIcon_] {
 }
 
 /* "Quest Completed" badge in profiles */
-div[aria-label="Completed a Quest"] {
+div:has(> a[href="https://discord.com/discovery/quests"]) {
     display: none;
 }
 
