@@ -41,8 +41,13 @@ div[class^=guildIconContainer_]:has(svg[class^=boostedGuildIconGem_]) {
 }
 
 /* Quests icon */
-svg[class^=questsIcon_] {
+svg[class^=questsIcon_] {
   display: none;
+}
+
+/* "Quest Completed" badge in profiles */
+div:has(> a[href="https://discord.com/discovery/quests"]) {
+    display: none;
 }
 
 /* Activity list */
@@ -53,12 +58,18 @@ div[class^=container_] > aside[class^=membersWrap_] > div[class^=members_] > div
   display: none;
 }
 
-/* Remove "Forward" hover bar button */
-div[class^=hoverBarButton][aria-label=Forward] {
+/* "Forward" hover bar button */
+div[class^=hoverBarButton_][aria-label=Forward] {
   display: none;
 }
 
-/* Remove "Events" button */
-nav > div > ul > li:has(div[data-list-item-id^=channels___upcoming-events-]) {
+/* "Events" button at the top of channel list */
+#channels > ul > li:has([id^=upcoming-events-]),
+#channels > ul > li:has([id^=upcoming-events-]) + [class^=sectionDivider_] {
   display: none;
+}
+
+/* "Discover" footer on the left sidebar */
+div[class^=footer_]:has(div[data-list-item-id="guildsnav___guild-discover-button"]) {
+    display: none;
 }
