@@ -190,6 +190,6 @@ div[class^=base_] > div[class^=notice_]:has([class^=premiumIcon_]) {
 }
 
 /* Profile popup upsell */
-div[id^="popout_"] > div > div > div[class^="outer_"] > div[class^="inner_"] > div[class^="body_"] > div[class^="upsellContainer_"] {
+div[class^="inner_"] > div[class^="body_"] > div[class^="upsellContainer_"] {
     display: none;
 }
