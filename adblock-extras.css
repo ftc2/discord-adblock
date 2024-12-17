@@ -70,6 +70,6 @@ div[class^=hoverBarButton_][aria-label=Forward] {
 }
 
 /* "Discover" footer on the left sidebar */
-div[class^=footer_]:has(div[aria-label=Discover]) {
+div[class^=footer_]:has(div[data-list-item-id="guildsnav___guild-discover-button"]) {
     display: none;
 }
