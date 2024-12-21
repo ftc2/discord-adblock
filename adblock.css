@@ -193,3 +193,8 @@ div[class^=base_] > div[class^=notice_]:has([class^=premiumIcon_]) {
 div[class^="inner_"] > div[class^="body_"] > div[class^="upsellContainer_"] {
     display: none;
 }
+
+/* Try nitro and get avatar decorations banner */
+div[class^=notice_][class*=colorPremium_] {
+  display: none;
+}
