@@ -83,6 +83,10 @@ div[class^=hoverBarButton_][aria-label=Forward] {
 div[class^=footer_]:has(div[data-list-item-id="guildsnav___guild-discover-button"]) {
     display: none;
 }
+/* "Discover" button in the new design */
+div[class^=itemsContainer_] > div[class^=stack_] > div[class^=listItem_]:has(div[data-list-item-id=guildsnav___guild-discover-button]) {
+display: none;
+}
 
 /* Soundmoji */
 div[class^=categorySection_]:has(div[class^=soundmojiViewMore_]) {
