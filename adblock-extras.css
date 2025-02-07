@@ -83,9 +83,3 @@ div[class^=hoverBarButton_][aria-label=Forward] {
 div[class^=footer_]:has(div[data-list-item-id="guildsnav___guild-discover-button"]) {
     display: none;
 }
-
-/* Pronouns in profiles */
-div[class^=pronounsTooltip_],
-div[class^=dotSpacer_]:has(+ [class^=pronounsTooltip_]) {
-  display: none;
-}
