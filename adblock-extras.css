@@ -9,7 +9,7 @@
 /* It is highly recommended you manually import the rules you want from this file, rather than using the entire list. */
 /* This is a highly opinionated collection of rules that remove clutter from the client, that some might find useful or desirable. */
 
-/* Remove avatar decorations */
+/* Avatar decorations */
 svg[class*=avatarDecoration_] {
   display: none;
 }
@@ -17,7 +17,7 @@ img[class*=avatarDecoration_] {
   display: none;
 }
 
-/* Remove profile decorations */
+/* Profile decorations */
 div[class*=profileEffects] {
     display: none;
 }
@@ -47,6 +47,16 @@ svg[class^=questsIcon_] {
 
 /* "Quest Completed" badge in profiles */
 div:has(> a[href="https://discord.com/discovery/quests"]) {
+    display: none;
+}
+
+/* "Nitro" and "Server Boosting" badges in profiles */
+div:has(> a[href="https://discord.com/settings/premium"]) {
+    display: none;
+}
+
+/* "Hype Squad" badge in profiles */
+div:has(> a[href="https://discord.com/settings/hypesquad-online"]) {
     display: none;
 }
 
