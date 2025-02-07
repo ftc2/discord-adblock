@@ -9,7 +9,7 @@
 /* It is highly recommended you manually import the rules you want from this file, rather than using the entire list. */
 /* This is a highly opinionated collection of rules that remove clutter from the client, that some might find useful or desirable. */
 
-/* Remove avatar decorations */
+/* Avatar decorations */
 svg[class*=avatarDecoration_] {
   display: none;
 }
@@ -17,7 +17,7 @@ img[class*=avatarDecoration_] {
   display: none;
 }
 
-/* Remove profile decorations */
+/* Profile decorations */
 div[class*=profileEffects] {
     display: none;
 }
@@ -50,6 +50,16 @@ div:has(> a[href="https://discord.com/discovery/quests"]) {
     display: none;
 }
 
+/* "Nitro" and "Server Boosting" badges in profiles */
+div:has(> a[href="https://discord.com/settings/premium"]) {
+    display: none;
+}
+
+/* "Hype Squad" badge in profiles */
+div:has(> a[href="https://discord.com/settings/hypesquad-online"]) {
+    display: none;
+}
+
 /* Activity list */
 h3[class^=membersGroup_]:has(span[role="button"]) {
   display: none;
@@ -72,4 +82,10 @@ div[class^=hoverBarButton_][aria-label=Forward] {
 /* "Discover" footer on the left sidebar */
 div[class^=footer_]:has(div[data-list-item-id="guildsnav___guild-discover-button"]) {
     display: none;
+}
+
+/* Pronouns in profiles */
+div[class^=pronounsTooltip_],
+div[class^=dotSpacer_]:has(+ [class^=pronounsTooltip_]) {
+  display: none;
 }
