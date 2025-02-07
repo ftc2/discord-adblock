@@ -6,6 +6,11 @@
 @author         CroissantDuNord & contributors
 ==/UserStyle== */
 
+/* Temporary: Valentines 2025 Nitro Nag */
+div[id^=popout_]:has(img[src="https://cdn.discordapp.com/assets/content/a0471c5c8afd40a1c23f57b11bc1b8f4332fafe3e9be48c87770511558ba1b3e.png"]) {
+  display: none;
+}
+
 /* Fullscreen Nitro trial ad */
 div[class^=layerContainer_]:has(div[class*="freeTrialPillWithSparkles_"]) {
   display: none;
