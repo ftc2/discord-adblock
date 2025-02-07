@@ -39,7 +39,7 @@ div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:ha
 /* Chat view blocks */
 /* App launcher icons (chat box, guild menu, AI apps on image hover) */
 div[class^=channelAppLauncher_] {
-  display: none;
+  display: none !important;
 }
 div[class^="jumpToPresentBar_"] {
   right: 16px;
