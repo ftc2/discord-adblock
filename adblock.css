@@ -16,6 +16,14 @@ div[class^=layerContainer_]:has(div[class*="freeTrialPillWithSparkles_"]) {
   display: none;
 }
 
+/* Hide Nitro quality selectors and upsell */
+div[class^="qualitySettingsContainer_"] > div > div > div > div> button[class*=premiumUpsell] {
+    display: none;
+}
+div[class^="qualitySettingsContainer_"] > div[class^=upsellBanner__] {
+    display: none;
+}
+
 /* Chat view blocks */
 /* App launcher icons (chat box, guild menu, AI apps on image hover) */
 div[class^=channelAppLauncher_] {
