@@ -12,7 +12,8 @@ Main adblock list for Nitro ads:
 @import url(https://croissantdunord.github.io/discord-adblock/adblock.css);
 ```
 
-Extra adblock list to remove profile customisations and Nitro-related badges:
+Extra adblock list to remove profile customisations and Nitro-related badges:  
+(Alternatively, consider opening adblock-extras.css to only pick the elements that you want to remove.)
 ```css
 @import url(https://croissantdunord.github.io/discord-adblock/adblock-extras.css);
 ```
@@ -21,46 +22,49 @@ Extra adblock list to remove profile customisations and Nitro-related badges:
 [<img src="https://vencord.dev/assets/logo-nav-oneko-padding.png" width="180">](https://raw.githubusercontent.com/CroissantDuNord/discord-adblock/main/adblock.css)
 
 ---
-## 🛡️ Blocked Elements (Main list)
-- [x] Profile Tab (Server Profile Bloat, Profile Bloat)
-- [x] Settings (Nitro, Boost, Products)
-- [x] Homepage (Store + Nitro)
-- [x] Gift Button
-- [x] Server Boost
-- [x] Emote Picker / Sticker Picker
-- [x] Shop
-- [x] Nitro Icon (Server)
-- [x] Super Reaction
-- [x] Message Limit Warning
-- [x] App Launcher Icons
+## 🛡️ Main list
+The main rule list that remove nitro ads and features that require nitro.  
+- [x] Ads in profile tabs.
+- [x] Ads in the settings menus.
+- [x] Upsells in free features (screen sharing, etc.)
+- [x] Full screen ads.
+- [x] Banner ads.
+- [x] Store and nitro buttons.
+- [x] Gift button.
+- [x] Server boost elements.
+- [x] Super reaction elements.
+- [x] Message limit warning.
+- [x] App launcher icons.
+- [x] Seasonal nitro nags.
 ---
-## 🛡️ Blocked Elements (Extras list)
-- [x] Profile Customisations (Avatar frames, effects, etc.)
-- [x] Server Booster Badges
-- [x] Server Boost Progress Bar
-- [x] Server Boost Icon
-- [x] Quests icons
-- [x] Activity List in guild members list
-- [x] Forward button in message hoverbar
-- [x] Discover footer in left sidebar
+## 🛡️ Extras list
+A very opinionated list with CSS rules that can remove various annoyances and superfluous gimmicks.
+It's recommended you look inside adblock-extras.css to pick only the elements you want to block specifically.  
+- [x] All Nitro profile customisations (Avatar frames, effects, etc.)
+- [x] Profile badges.
+- [x] Server boost elements.
+- [x] Activity list in guild members list.
+- [x] Forward button in message hoverbar.
+- [x] Discover button.
+- [x] Soundmoji.
 ---
 
 ## ❓ Installation Guide
 
-1. You need a Custom Client (Like [BetterDiscord](https://betterdiscord.app/) or [Vencord (Recomended)](https://vencord.dev))
+1. You need a client mod (Like [BetterDiscord](https://betterdiscord.app/) or [Vencord (Recommended)](https://vencord.dev))
 
 - **BetterDiscord:**
 Open the CustomCSS Tab in the user settings
 - **Vencord:**
-In the Vencord section chose "Themes", then open the QuickCSS File
+Open settings, choose "Vencord", then "Edit QuickCSS"
 
-2. Copy & Paste this css into the Custom CSS input *(This will load adblock.css from here, this mean that it will auto-update from this repo)*
+2. Copy & Paste this CSS into the Custom CSS input *(This will load adblock.css from here, this mean that it will auto-update from this repo)*
 
 For main adblock:
 ```css
 @import url("https://croissantdunord.github.io/discord-adblock/adblock.css");
 ```
-- (Optional) For the extras, add this as well on a new line:
+- (Optional) For **ALL** the extras, add this as well on a new line:
 ```css
 @import url("https://croissantdunord.github.io/discord-adblock/adblock-extras.css");
 ```
@@ -69,7 +73,7 @@ For main adblock:
 
 3. Done. Enjoy a slightly less frustrating Discord experience. 👍
 
-## Issues / Idea
+## Issues or suggestions
 
 You can report any problems and suggest ideas by [opening an issue](https://github.com/CroissantDuNord/discord-adblock/issues).
 
