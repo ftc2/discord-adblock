@@ -85,10 +85,13 @@ div[class^=buttons__] > div[class^="container_"]:has(path[d=" M-7,10 C-8.1049995
     display: none;
 }
 
-/* Settings blocking */
-/* Banner ad */
-#profile-customization-tab > div:has(div[class*="artContainer"][role="presentation"]) {
-    display: none;
+/* Settings pages */
+/* Banner ads */
+#profile-customization-tab>div:has(div[class*="artContainer"][role="presentation"]) {
+  display: none;
+}
+#profile-customization-tab > div[class^=upsellContainer__] {
+display: none;
 }
 
 /* Avatar decoration settings */
@@ -99,6 +102,11 @@ div[class^=buttons__] > div[class^="container_"]:has(path[d=" M-7,10 C-8.1049995
 /* Profile effect settings */
 #profile-customization-tab > div > div[class*=profileCustomizationSection_] > div[class*=baseLayout_] > div[class*=sectionsContainer_] > div[class*=customizationSection_]:nth-of-type(5) {
     display: none;
+}
+
+/* Profile Nitro preview */
+#profile-customization-tab > div:has(div[class^=premiumFeatureBorder__]) {
+display: none;
 }
 
 /* "Try Nitro!" ad */
