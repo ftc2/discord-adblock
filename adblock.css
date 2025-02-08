@@ -120,13 +120,13 @@ display: none;
 }
 
 /* App colour */
-#appearance-tab > div > div > div > div > div[role=radiogroup] > section:not(section[class*=basicThemeSelectors_]) {
-    display: none;
+#appearance-tab > div > div > div > div > div > div > div > section:has(svg[class*=nitroWheel_]) {
+  display: none;
 }
 
 /* Icon Theme (just edit the .ico file) */
-#appearance-tab > div > div > div > div[class*=selectionGroup_]:has([class*=appIconSelectionContainer_]) {
-    display: none;
+#appearance-tab > div > div div[class^=selectionGroup__]:has(svg[class*=nitroWheel_]) {
+  display: none;
 }
 
 /* BOGO button in settings */
