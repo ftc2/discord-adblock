@@ -16,6 +16,14 @@ div[class^=layerContainer_]:has(div[class*="freeTrialPillWithSparkles_"]) {
   display: none;
 }
 
+/* Hide Nitro quality selectors and upsell */
+div[class^="qualitySettingsContainer_"] > div > div > div > div> button[class*=premiumUpsell] {
+    display: none;
+}
+div[class^="qualitySettingsContainer_"] > div[class^=upsellBanner__] {
+    display: none;
+}
+
 /* Chat view blocks */
 /* App launcher icons (chat box, guild menu, AI apps on image hover) */
 div[class^=channelAppLauncher_] {
@@ -142,18 +150,8 @@ If anyone knows a better way to block precisely the billing info settings, pleas
     display: none;
 }
 
-/* Shop AD Profile */
-html.full-motion.show-redesigned-icons.theme-dark.platform-web.font-size-16 body div#app-mount.appMount_fae9dd div.appAsidePanelWrapper__714a6 div.notAppAsidePanel__9d124 div.app_b1f720 div.app_de4237 div.layers__1c917.layers_a23c37 div.layer__2efaa div.standardSidebarView__1129a div.contentRegion__0bec1 div.contentTransitionWrap_c5bc61 div.contentRegionScroller__86c79.contentRegionShownSidebar__610ed.auto_a48086.scrollerBase_dc3aa9 div:nth-child(3) {
-    display: none;
-}
-
 /* Custom Join Sound AD (No discord I dont want to play a random meme sound when I join a call)*/
 #popout_4611 > div > div > div.gridNoticeWrapper__548b9 > div {
-    display: none;
-}
-
-/* Profile Effect (Shop) */
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) {
     display: none;
 }
 
